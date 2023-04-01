@@ -1,5 +1,3 @@
-variable "aws_iam_groups" {
-    type = map(object({
-        name = string
-    }))
+variable "aws_iam_group_names" {
+    type = set(string)
 }

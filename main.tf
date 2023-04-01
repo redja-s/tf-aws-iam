@@ -14,3 +14,12 @@ terraform {
     }
   }
 }
+
+module "aws_iam_groups" {
+  source = "./modules/groups"
+
+  aws_iam_group_names = [
+    "admins", "devs"
+  ]
+    
+}
