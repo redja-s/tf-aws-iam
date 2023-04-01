@@ -3,7 +3,7 @@ terraform {
 
   backend "s3" {
     bucket = "state-bucket-292030"
-    key    = "terraform-aws-iam.tfstate"
+    key    = "tf-aws-iam.tfstate"
     region = "eu-west-1"
   }
 
@@ -16,7 +16,7 @@ terraform {
 }
 
 module "aws_iam_groups" {
-  source = "./modules/groups"
+  source = "./modules/iam"
 
   aws_iam_group_names = [
     "admins", "devs"
