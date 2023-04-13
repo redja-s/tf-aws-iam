@@ -8,9 +8,11 @@
             "Federated": "${oidc_arn}"
         },
         "Condition": {
+            "StringLike": {
+              "token.actions.githubusercontent.com:sub": "repo:redja-s/tf-aws-iam:*"
+            },
             "StringEquals": {
-                "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
-                "token.actions.githubusercontent.com:sub": "repo:"
+                "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
             }
         }
       }
