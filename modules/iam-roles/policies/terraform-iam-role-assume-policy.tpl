@@ -9,7 +9,10 @@
         },
         "Condition": {
             "StringLike": {
-              "token.actions.githubusercontent.com:sub": "repo:redja-s/tf-aws-iam:*"
+              "token.actions.githubusercontent.com:sub": [
+                "repo:redja-s/tf-aws-iam:*",
+                "repo:redja-s/infra-spring-clinic:*"
+              ]
             },
             "StringEquals": {
                 "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
