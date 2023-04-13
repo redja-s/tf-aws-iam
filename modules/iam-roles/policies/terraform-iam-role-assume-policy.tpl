@@ -11,7 +11,7 @@
             "StringLike": {
               "token.actions.githubusercontent.com:sub": [
                 "repo:redja-s/tf-aws-iam:*",
-                "repo:redja-s/infra-spring-clinic:*"
+                "repo:redja-s/app-deployment:*"
               ]
             },
             "StringEquals": {
