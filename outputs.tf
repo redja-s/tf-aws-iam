@@ -1,4 +1,3 @@
-output "group_names" {
-    value = module.aws_iam_groups
-    description = "List of IAM groups"
+output "user_passwords" {
+  value = module.aws_iam_groups.user_passwords
 }

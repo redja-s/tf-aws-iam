@@ -15,11 +15,20 @@ terraform {
   }
 }
 
-module "aws_iam_groups" {
-  source = "./modules/iam"
+module "aws_iam_roles" {
+  source = "./modules/iam-roles"
 
-  aws_iam_group_names = [
-    "admins", "devs"
+  terraform_role_name                     = "aws-terraform-role"
+  terraform_apply_permissions_policy_name = "aws-terraform-policy"
+}
+
+module "aws_iam_groups" {
+  source = "./modules/iam-users-groups"
+
+  admin_group_name                  = "iam-admin-group"
+  admin_group_policy_attachment_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
+  admin_users = [
+    "jared-t480s",
+    "jared-desktop"
   ]
-    
 }
