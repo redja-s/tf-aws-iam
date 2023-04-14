@@ -25,6 +25,8 @@ module "aws_iam_roles" {
 module "aws_iam_groups" {
   source = "./modules/iam-users-groups"
 
+  pgp_key = "public_key.gpg"
+
   admin_group_name                  = "iam-admin-group"
   admin_group_policy_attachment_arn = "arn:aws:iam::aws:policy/AdministratorAccess"
   admin_users = [

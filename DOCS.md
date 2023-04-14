@@ -27,5 +27,7 @@ No inputs.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_user_passwords"></a> [user\_passwords](#output\_user\_passwords) | n/a |
 <!-- END_TF_DOCS -->

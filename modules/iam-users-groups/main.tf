@@ -24,9 +24,10 @@ resource "aws_iam_group_policy_attachment" "admin_group_policy_attachment" {
 
 
 resource "aws_iam_user_login_profile" "logins" {
-  for_each                = aws_iam_user.admin_users
-  user                    = each.value.name
-  
+  for_each = aws_iam_user.admin_users
+  user     = each.value.name
+  pgp_key  = data.local_file.pgp_key_file.content_base64
+
   password_reset_required = true
 
   lifecycle {

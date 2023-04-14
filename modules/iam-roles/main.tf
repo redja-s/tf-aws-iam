@@ -8,7 +8,7 @@ resource "aws_iam_policy" "terraform_apply_permissions_policy" {
   policy = file("${path.module}/policies/terraform-iam-role.json")
 }
 
-resource "aws_iam_role_policy_attachment" "terraform_apply_permissions" {
+resource "aws_iam_role_policy_attachment" "terraform_apply_permissions_attachment" {
   role       = aws_iam_role.terraform_role.name
   policy_arn = aws_iam_policy.terraform_apply_permissions_policy.arn
 }
