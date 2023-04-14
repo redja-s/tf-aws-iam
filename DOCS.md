@@ -14,7 +14,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_aws_iam_groups"></a> [aws\_iam\_groups](#module\_aws\_iam\_groups) | ./modules/iam | n/a |
+| <a name="module_aws_iam_groups"></a> [aws\_iam\_groups](#module\_aws\_iam\_groups) | ./modules/iam-users-groups | n/a |
+| <a name="module_aws_iam_roles"></a> [aws\_iam\_roles](#module\_aws\_iam\_roles) | ./modules/iam-roles | n/a |
 
 ## Resources
 
@@ -26,7 +27,5 @@ No inputs.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_group_names"></a> [group\_names](#output\_group\_names) | List of IAM groups |
+No outputs.
 <!-- END_TF_DOCS -->
