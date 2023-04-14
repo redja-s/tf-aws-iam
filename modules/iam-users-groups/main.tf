@@ -26,6 +26,7 @@ resource "aws_iam_group_policy_attachment" "admin_group_policy_attachment" {
 resource "aws_iam_user_login_profile" "logins" {
   for_each                = aws_iam_user.admin_users
   user                    = each.value.name
+  
   password_reset_required = true
 
   lifecycle {
