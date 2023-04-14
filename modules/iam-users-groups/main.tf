@@ -27,4 +27,12 @@ resource "aws_iam_user_login_profile" "logins" {
   for_each                = aws_iam_user.admin_users
   user                    = each.value.name
   password_reset_required = true
+
+  lifecycle {
+    ignore_changes = [
+      password_length,
+      password_reset_required,
+      pgp_key
+    ]
+  }
 }
