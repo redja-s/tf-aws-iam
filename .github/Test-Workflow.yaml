@@ -1,0 +1,16 @@
+name: Test Checkout
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+  TestWorkflow:
+    uses: redja-s/app-deployment/.github/workflows/Test-Workflow.yaml@main
+    secrets: inherit
+    
